@@ -1,0 +1,13 @@
+@import 'src/App.scss';
+
+.header_item {
+  font-family: $mainFont;
+  font-size: 10pt;
+  color: #222222;
+  line-height: 12px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

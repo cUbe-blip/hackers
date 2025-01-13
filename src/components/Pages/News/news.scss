@@ -1,0 +1,92 @@
+@import 'src/App.scss';
+.news {
+  max-width: $maxContentWidth;
+  margin: 0 auto;
+  padding: 1rem;
+
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__back-link {
+    color: $textColor;
+    text-decoration: none;
+    font-family: $mainFont;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__content {
+    background-color: $backgroundColor;
+    padding: 1rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+
+  &__meta {
+    font-size: 0.8rem;
+    color: $secondaryTextColor;
+    margin-bottom: 1rem;
+    font-family: $mainFont;
+
+    > * {
+      margin-right: 1rem;
+    }
+  }
+
+  &__source-link {
+    color: $secondaryTextColor;
+    text-decoration: underline;
+
+    &:hover {
+      color: $textColor;
+    }
+  }
+
+  &__comments-section {
+    margin-top: 2rem;
+  }
+
+  &__comments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__comments-title {
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+
+  &__refresh-button {
+    padding: 0.5rem 1rem;
+    background-color: $secondColor;
+    border: none;
+    color: $mainColor;
+    cursor: pointer;
+    font-family: $mainFont;
+
+    &:hover {
+      background-color: darken($secondColor, 10%);
+    }
+  }
+
+  &__comments-list {
+    margin-top: 1rem;
+  }
+
+  &__loading {
+    text-align: center;
+    padding: 2rem;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+}

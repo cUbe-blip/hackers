@@ -1,0 +1,17 @@
+.icon {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &--logo {
+    background-image: url('~ui/Icon/IconAssets/main_Logo.svg');
+  }
+
+  &--triangle {
+    background-image: url('~ui/Icon/IconAssets/triangle.svg');
+  }
+}

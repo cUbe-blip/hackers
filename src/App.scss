@@ -1,0 +1,51 @@
+// Colors
+$mainColor: #ffffff;
+$secondColor: #ff6600;
+$backgroundColor: #f6f6ef;
+$textColor: #000000;
+$secondaryTextColor: #828282;
+$linkColor: #000000;
+$linkHoverColor: #ff6600;
+$commentBorderColor: #ccc;
+
+// Shadows
+$blockShadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+$mainFont: Verdana, Geneva, sans-serif;
+
+// Sizes
+$maxContentWidth: 1200px;
+$commentIndent: 40px;
+
+// Layout
+:root {
+  background-color: $mainColor;
+  font-family: $mainFont;
+  width: 85%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 750px) {
+  :root {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.container {
+  max-width: $maxContentWidth;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100%);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  cursor: pointer;
+}

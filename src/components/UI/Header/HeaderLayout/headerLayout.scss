@@ -1,0 +1,40 @@
+@import 'src/App.scss';
+
+.header {
+  background-color: $secondColor;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  font-family: $mainFont;
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__title {
+    font-size: 10pt;
+    color: #222222;
+    line-height: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__separator {
+    color: #222222;
+    font-size: 10pt;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .header {
+    padding: 4px;
+    flex-wrap: wrap;
+  }
+}

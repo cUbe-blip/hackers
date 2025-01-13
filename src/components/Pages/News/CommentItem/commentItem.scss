@@ -1,0 +1,88 @@
+@import 'src/App.scss';
+
+.comment {
+  margin: 0.3rem 0;
+  font-family: $mainFont;
+
+  &__content {
+    padding: 0.2rem 0;
+  }
+
+  &__meta {
+    font-size: 0.8rem;
+    color: $secondaryTextColor;
+    margin-bottom: 0.3rem;
+  }
+
+  &__author {
+    margin-right: 1rem;
+    color: $textColor;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0.3rem 0;
+    overflow-wrap: break-word;
+
+    p {
+      margin: 0.3rem 0;
+    }
+
+    a {
+      color: $linkColor;
+      text-decoration: underline;
+
+      &:hover {
+        color: $linkHoverColor;
+      }
+    }
+  }
+
+  &__expand-button {
+    background: none;
+    border: none;
+    color: $secondaryTextColor;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.8rem;
+    font-family: $mainFont;
+
+    &:hover {
+      color: $linkHoverColor;
+    }
+  }
+
+  // Стили для разных уровней вложенности
+  @for $i from 0 through 15 {
+    &--level-#{$i} {
+      margin-left: if($i == 0, 0, 40px);
+
+      .comment__content {
+        position: relative;
+
+        &::before {
+          @if $i > 0 {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #eee;
+          }
+        }
+      }
+    }
+  }
+
+  // Стили для корневых комментариев
+  &--level-0 {
+    border-top: 1px solid $commentBorderColor;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
